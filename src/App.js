@@ -11,14 +11,13 @@ function App() {
 
       <Navbar />
 
-      <div className="container">
-
-        <div className="row">        
-           <CountriesList />
-            <Routes>
-              <Route path='/:id' element={ <CountryDetails/> } />
-            </Routes>
-        </div>
+      <div className="twoColumns">
+                
+        <CountriesList />
+          <Routes>
+            <Route path='/:id' element={ <CountryDetails/> } />
+          </Routes>
+        <div></div>
       </div>
       
     </div>

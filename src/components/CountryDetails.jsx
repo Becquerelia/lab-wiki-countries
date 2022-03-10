@@ -26,15 +26,17 @@ function CountryDetails() {
 
   return (
 
-    <div>
+    <div className='cardDetails'>
 
-      <img src={`https://flagpedia.net/data/flags/icon/72x54/${countryDetails.alpha2Code.toLowerCase()}.png`}/>  
-      <h3>{countryDetails.name.common}</h3>
-      <p>Capital:{countryDetails.capital}</p>
-      <p>Area:{countryDetails.area}</p>
+      <h2>Country:</h2>
+
+      <img src={`https://flagpedia.net/data/flags/icon/72x54/${countryDetails.alpha2Code.toLowerCase()}.png`} className="marginImg" />  
+      <h3>{countryDetails.name.common.toUpperCase()}</h3>
+      <p>Capital: {countryDetails.capital}</p>
+      <p>Area: {countryDetails.area}</p>
       <p>Borders:</p>
-          {countryBorders.map((eachBorder, index)=>{
-            return <Link to={`/${eachBorder}`}>{index + "." + eachBorder + " "}</Link>
+          {countryBorders.map((eachBorder)=>{
+            return <Link to={`/${eachBorder}`} className="countryBorders">{eachBorder}</Link>
           })}
 
 
